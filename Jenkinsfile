@@ -6,5 +6,10 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'node --eval "console.log(process.arch,process.platform)"'
+            }
+        }
     }
 }
